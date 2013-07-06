@@ -1,0 +1,441 @@
+/* 
+   Tecnologia WEB - Portal Carrera
+   StopCopymeRight	 
+   Hector G. Carballo Orellana
+   Katherine H. Rojas Pino
+   Franz S. Javier Gomez 
+*/ 
+/*---Estructura Prinsipal---*/
+.pagina0,.pagina1,.pagina2{
+    border-left:1 #000;
+    border-left-style:solid;
+    border-left-width:thin;
+    border-right:1 #000;
+    border-right-style:solid;
+    border-right-width:thin;
+}
+.pagina0{	 
+    margin:0 auto;
+    margin-top:0px;
+    width:970px;
+    height:13px;	
+    color:#000;
+    text-align:right; font-size:small;	
+    padding-left:10px;
+    padding-right:10px;
+    border-top-style:solid;border-top:1 #000;
+    border-top-width:thin;
+    background-color:#333;	
+}
+.pagina1{	
+    margin:0 auto;
+    width:970px;    
+    height:auto;  
+    background-color:#FFF; 
+    padding-left:10px;
+    padding-right:10px;
+}
+.pagina2{	
+    margin:0 auto;
+    margin-top:-16px;
+    width:970px;
+    height:40px;  
+    background-color:#333333; 
+    border-top-color:#FFFFFF; 
+    border-top-style:solid; text-align:center; color:#FFFFFF;	
+    padding-left:10px;
+    padding-right:10px;
+}
+.pagina0 a, .pagina2 a {
+    color:#CCC; font-weight:bold; font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:small;text-decoration:underline;
+}
+.pagina0 a:hover, .pagina2 a:hover {
+    color:#FFFFFF; font-weight:bold;font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:small;text-decoration:blink;
+}
+/*---Estructura pagina 1---*/
+.superior{
+    margin-top:0px;
+    height:100px;
+    width:970px;
+    background-image:url(encabezado-rojo.jpg);
+}
+.imagen_prinsipal{
+    width:100%;
+    height:auto;
+}
+
+.indice{
+    float:left;  width:14%; 
+    background-color:#FFF; 
+    margin-top:29px;
+    padding:0px;
+    font-size:12px;
+}
+.contenido{
+    float:right;  
+    background-color:#800000; 
+    margin-top:29px;       
+    margin-bottom:10px;
+    padding:10px;
+    width:83%;
+    height:auto;
+}
+.columna-1{ 
+    float:left;
+    width: 72%; height: auto; 
+    background-color:#FFE1E1; 
+    padding-top:20px;
+    padding-left:5px;
+}
+.columna-2{
+    float:right;
+    width: 25%;
+    height: auto;
+    background-color:#FFE1E1;
+    padding:5px;
+    padding-left:5px;
+    padding-top:20px;
+    color:#444;
+    font-size:11px;
+
+}
+
+.contenido-real{
+    font-family:Verdana, Geneva, sans-serif;
+    padding:3;	
+    width:98%;
+}
+.contenido-real-titulo{
+    font-weight:bold;
+    font-size:15px;
+    padding:2px;
+    color:#800000;
+}
+.contenido-real-texto{
+    width:100%;
+    padding:3px; 
+    /*border-top-color:#000;
+    border-top-style:solid;
+    border-width:thin;*/
+}
+
+
+.ancla{
+
+}
+/*--- Atributos Generales---*/
+.body{
+    margin: 0px 0px 0px 0px; background-color:#000; font:Verdana, Geneva, sans-serif;
+}
+.body2{
+    width:100%; 
+    height:auto; 
+    background-color:#000000; 
+    margin-top:0px;
+}
+
+
+/*=================================*/
+
+/*---------Tabla-------------------*/
+
+.tabla_formulario{
+    height:auto;
+    border-color:#900;
+    border:2px;
+    border-style:solid;  
+    background-color:#FFE1E1;
+}
+.tabla_formulario th{
+    padding-left:10px;	
+    padding:5px;
+    text-align:left;
+    width:auto;
+}
+.tabla_formulario td{
+    width:auto;
+}
+.tabla_listado{
+    font-family:Verdana, Geneva, sans-serif;
+    height:auto;
+    border-color:#FFF;
+    background-color:#FFE1E1;
+    border:2px;
+    border-style:solid;
+}
+.tabla_listado td{
+    width:auto;
+}
+.tabla_formulario_grande{
+    font-family:Verdana, Geneva, sans-serif;
+    width:95%;
+    border-color:#33FF66;
+}
+.tabla_formulario_grande td{
+    padding-left:15px;
+}
+
+/* titulos de columna*/
+.fila0{
+    background-color:#800000;
+    color:#FFF;
+    font-size:larger; 
+    padding:10px;
+}
+.fila1{
+    background-color:#FFE1E1;
+}
+.fila2{
+    background-color:#C6CFDE;
+}
+.fila1:hover
+{background-color:#ffffff;
+}
+.fila2:hover{
+    background-color:#ffffff;
+}
+
+
+/*estructura botones*/
+/*estilo botones*/
+.boton_obscuro{
+    color:#FFF;
+    background-color:#000;
+    border:0px;
+}
+.boton_obscuro:hover{
+    color:#FFF;
+    background-color:#666;
+}
+
+
+/* Barra 1*/
+.overlay {
+    position: absolute;
+    top: -1px;
+    bottom: 0px;
+    left: -10px;
+    width:990px;
+    background: #000;
+    opacity: 0.65;
+    -moz-opacity: 0.65;
+    filter:alpha(opacity=65);
+    height: 31px;
+}
+.container {
+    position:relative;
+    color:#FFF;
+    top: 0px;
+    left: 0px;
+    width:1000px;
+}
+.content {
+    position:absolute;
+    width: 300px;
+    left: 149px;
+    top: -23px;
+    height: 30px;
+}
+#column-1 {
+    width: 100%;
+}
+#column-2 {
+    width: 250px;
+    margin-left: 20px;
+    float: left;
+    display: inline;
+}
+#column-1 .content {
+    padding: 3px;
+    width: 824px;
+    color:#FFF;
+    font-family:Verdana, Geneva, sans-serif;
+    font-weight:bold;
+}
+
+/*----------Vertical ----------*/  
+#menu_f {
+    font-size:0.8em;
+    width:100%;
+    color:#FFF;
+    font-family:Verdana, Geneva, sans-serif;
+    top: 8px;
+}
+#menu_f ul {margin:0px; padding:0px;}
+#menu_f li {list-style: none;  padding-left:5px;  padding-top:2px; padding-bottom:2px; cursor:pointer;} 
+
+ul.nivel-1 {background:#333;}
+ul.nivel-1 li {
+    border-bottom: #fff solid;
+    border-top: #fff solid;
+    border-width: 1px;
+}
+
+#menu_f a {
+    color: #fff;
+
+    display:block;
+    height:15px;
+    line-height: 15px;
+    text-indent: 10px;
+    text-decoration:none;
+    width:100%;
+}
+#menu_f a:hover{
+    text-decoration:none;
+}
+/*main hover*/
+#menu_f li:hover {
+    background: #800000;
+    position: relative;
+}
+
+ul.nivel-2 {
+    display: none;
+}
+.paquete{
+    color:#FFF;	
+}
+li.paquete{
+    background-color:#000;
+    font-weight:bold;
+}
+#menu_f li.paquete:hover {
+    background: #FFF;
+    color:#000;
+    position: relative;
+}
+li:hover .nivel-2 {
+    background: #333;
+    border: #fff solid;
+    border-width: 1px;
+    display: block;
+    position: absolute;
+    left: 136px;
+    top: 0px;
+}
+ul.nivel-2 li {
+    border: none;
+    float:left;
+    width:180px;
+}
+
+/*--horizontal--*/
+
+#menu_h{
+    width:991px;
+    height:23px;
+    background-color:#000;
+    color:#FFF;  cursor:pointer;
+    font-size:0.8em;
+    font-family:Verdana, Geneva, sans-serif;
+    /*  transparencia*/
+    opacity: 0.9;
+    -moz-opacity: 0.65;
+    filter:alpha(opacity=65);
+    position:absolute;	
+    /*superior statico	*/
+    position: fixed;
+    left:auto;
+    margin-left:-10px;
+    margin-top:-122px;
+    display: block;
+    background-color:#666;
+    color:#FFF;
+}
+
+#menu_h ul{
+    margin:0px; 
+    padding:0px;
+    color:#FFF;}
+
+#menu_h ul li
+{
+    display:inline;
+    height:19px; 
+    float:left;
+    list-style:none;
+    margin-left:5px; 
+    color:#FFF;}
+
+#menu_h li a
+{color:#FFF; text-decoration:none;}
+
+#menu_h li a:hover
+{text-decoration:underline; }
+
+
+/*#menu_h -> ul -> li -> ul -> li*/
+
+#menu_h li ul
+{
+    margin:0px;
+    padding:0px;
+    display:none;
+}
+
+#menu_h li:hover ul
+{
+    display:block;
+    width:200px;
+}
+
+#menu_h li li
+{
+    list-style:none;
+    display:list-item;
+}
+
+#menu_h ul li
+{
+    display:inline;
+    height:18px;
+    float:left;
+    list-style:none;
+    left: 0px;
+    margin-left:10px;
+    position:relative;
+}
+#menu_h li ul
+{
+    margin:0px;
+
+    padding:3px;
+    display:none;
+    position:absolute;
+    left:0px;
+    top:18px;
+    background-color:#800000;
+}
+
+#buscar{
+    font-family:Verdana, Geneva, sans-serif;
+    color:#FFF;
+    background-color:#666;
+}
+body,.body2{
+    background-color:#CCC;	
+}
+.tabla_formulario,.tabla_listado
+{
+    font-size:10px;	
+}
+
+.tabla_listado th,.tabla_listado td,.tabla_formulario th,.tabla_formulario td{
+    padding:5px;
+}
+
+
+.buscar{
+    position:absolute; left: 715px; top: 0px; width: 235px;	
+}
+
+.rSpan{
+    font-size:10px;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 5px;
+    color: #60676a;
+}

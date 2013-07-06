@@ -1,0 +1,318 @@
+<?php /* Smarty version 2.6.14, created on 2013-07-05 11:46:50
+         compiled from DatosPersonales/IFormulario.php */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_radios', 'DatosPersonales/IFormulario.php', 119, false),)), $this); ?>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+        <title>Uagrm - Ingenieria Informatica</title>  
+        <link rel="shortcut icon" href="../recursos/favicon.ico">
+        <link rel="stylesheet" media="all" type="text/css" href="../recursos/<?php echo $this->_tpl_vars['tema']; ?>
+"/>
+
+        <link type="text/css" rel="stylesheet" href="../General/DatePicker/css/jquery-ui-1.8.12.custom.css"/>
+        <script type="text/javascript" src="../General/DatePicker/js/jquery-1.5.1.min.js"></script>
+        <script type="text/javascript" src="../General/DatePicker/js/jquery-ui-1.8.12.custom.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="../General/Validador/css/screen.css" />
+<!--        <script src="../General/Validador/jquery-1.6.1.min.js" type="text/javascript"></script>-->
+        <script src="../General/Validador/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="validador.js" type="text/javascript"></script></head>
+
+    <?php echo '
+    <script type="text/javascript" language=javascript>
+        $(function() {$("#fechanacP").datepicker(); });
+    </script>
+    '; ?>
+
+
+    <body>
+        <div class="body2">    
+            <div class="pagina0">
+            </div>    
+            <div class="pagina1">
+                <!-- <encabezado> -->
+                <div class="superior"></div>
+                <!-- </encabezado> -->     
+                <!-- <menuPublico> -->   
+
+                <div id="column-1" class="container">      
+                    <div class="overlay"></div>
+					<?php require_once('../General/indiceH.php'); ?>
+
+                    <div class="buscar">
+                        <table style="border: 0px;">
+                            <tr>
+                                <td>
+                                    <input type="text" name="tBuscar" id="tBuscar">
+                                </td>
+                                <td>
+                                    <input type="submit" name="buscar" id="buscar" value="Buscar" onClick="location='../Busqueda/Formulario.php?texto=' + document.getElementById('tBuscar').value">
+                                </td>    
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- </menuPublico> -->
+
+<!-- <indice> -->     
+                <div class="indice">
+                    <?php 
+                    require_once('../General/indice.php');
+                     ?>
+                </div>
+                <!-- </indice> -->	
+                <!-- <contenido> -->
+                <div class="contenido">
+                    <div style="background-color:#FFF; width:AUTO; height:auto; padding:15px;">
+                        <!--  CONTENIDO NETO -->
+                        <div class="contenido-real">
+                            <div class="contenido-real-titulo">
+                                Formulario de Datos
+                            </div>
+
+                            <div class="contenido-real-texto">      
+                                <form id="form1" name="form1" action="Procesar.php?id=<?php echo $this->_tpl_vars['id']; ?>
+&accion=<?php echo $this->_tpl_vars['accion']; ?>
+&tipo=<?php echo $this->_tpl_vars['tipo']; ?>
+" method="POST">           
+                                    <table style="width: 70%" class="tabla_formulario" >  
+                                        <tr class="fila0">
+                                            <th colspan="2" style="text-align: left">
+                                                Datos personales
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <span class="rSpan">Los campos marcados con (*), son requeridos.</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                CI<span class="rSpan">(*)</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="ci" value="<?php echo $this->_tpl_vars['valores']['per_ci']; ?>
+" readonly/>
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                <?php echo $this->_tpl_vars['regcod']; ?>
+<span class="rSpan">(*)</span>
+                                            </th>
+                                            <td style="text-align: left">
+                                                <input type="text" name="registro" value="<?php echo $this->_tpl_vars['registro']; ?>
+" readonly/>
+                                            </td>
+                                        </tr>      
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Nombres<span class="rSpan">(*)</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="nombres" value="<?php echo $this->_tpl_vars['valores']['per_nombres']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Apellidos<span class="rSpan">(*)</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="apellidos" value="<?php echo $this->_tpl_vars['valores']['per_apellidos']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                G&eacute;nero
+                                            </th>
+                                            <td style="text-align: left">
+                                                <?php echo smarty_function_html_radios(array('name' => 'genero','values' => $this->_tpl_vars['sGenVals'],'output' => $this->_tpl_vars['sGenNom'],'selected' => $this->_tpl_vars['sGenSel'],'separator' => '<br />'), $this);?>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Fecha de nacimiento<span class="rSpan">(*)</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" id="fechanacP" name="fechanac" value="<?php echo $this->_tpl_vars['valores']['per_fechanac']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Tel&eacute;fono
+                                            </th>
+                                            <td>
+                                                <input type="text" name="telefono" value="<?php echo $this->_tpl_vars['valores']['per_telefono']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Tel&eacute;fono m&oacute;vil
+                                            </th>
+                                            <td>
+                                                <input type="text" name="telmovil" value="<?php echo $this->_tpl_vars['valores']['per_telmovil']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Email
+                                            </th>
+                                            <td>
+                                                <input type="text" name="email" value="<?php echo $this->_tpl_vars['valores']['per_email']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Estado
+                                            </th>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr class="fila0">
+                                            <th colspan="2" style="text-align: left">
+                                                Datos de usuario
+                                            </th>
+                                        </tr>
+                                        <?php if ($this->_tpl_vars['accion'] == 'UPD'): ?>
+                                        <tr class="fila1_f">
+                                            <td colspan="2">
+                                                <span class="rSpan">Deje la contraseña en blanco para conservar la actual.</span>
+                                            </td>
+                                        </tr>
+                                        <?php endif; ?>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Usuario<span class="rSpan">(*)</span>
+                                            </th>
+                                            <td>
+                                                <input type="text" name="nombreU" value="<?php echo $this->_tpl_vars['valoresU']['usu_nombre']; ?>
+" />
+                                            </td>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Contraseña
+                                            </th>
+                                            <td style="text-align: left">
+                                                <input id="contraseniaU" type="password" name="contraseniaU<?php if ($this->_tpl_vars['accion'] == 'UPD'): ?>m<?php endif; ?>" />
+                                            </td>
+                                        </tr>
+                                        <?php if ($this->_tpl_vars['accion'] != 'UPD'): ?>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Confirmaci&oacute;n
+                                            </th>
+                                            <td style="text-align: left">
+                                                <input type="password" name="contraseniaU_<?php if ($this->_tpl_vars['accion'] == 'UPD'): ?>m<?php endif; ?>" />
+                                            </td>
+                                        </tr>
+                                        <?php endif; ?>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Grupo
+                                            </th>
+                                            <td>
+                                                <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['grupos']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['show'] = true;
+$this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = $this->_sections['i']['loop'];
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?>
+                                                <?php if ($this->_tpl_vars['grupos'][$this->_sections['i']['index']]['id'] == $this->_tpl_vars['valoresU']['usu_gru_id']):  echo $this->_tpl_vars['grupos'][$this->_sections['i']['index']]['gru_nombre'];  endif; ?>
+                                                <?php endfor; endif; ?>
+                                            </td>
+                                        </tr>
+                                        <tr class="fila0">
+                                            <th colspan="2" style="text-align: left">
+                                                Tema de la página
+                                            </th>
+                                        </tr>
+                                        <tr class="fila1_f">
+                                            <th>
+                                                Tema
+                                            </th>
+                                            <td>
+                                                <select name="tema">
+                                                    <option value="1" <?php if ($this->_tpl_vars['temaU'] == 1): ?>selected<?php endif; ?>>Tema Azul</option>
+                                                    <option value="2" <?php if ($this->_tpl_vars['temaU'] == 2): ?>selected<?php endif; ?>>Tema Lila</option>
+                                                    <option value="3" <?php if ($this->_tpl_vars['temaU'] == 3): ?>selected<?php endif; ?>>Tema Rojo</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr class="fila0">
+                                            <td style="text-align: center" colspan="2">
+                                                <input type="hidden" name="estado" value="<?php echo $this->_tpl_vars['estado']; ?>
+"/>
+                                                <input type="hidden" name="grupoU" value="<?php echo $this->_tpl_vars['valoresU']['usu_gru_id']; ?>
+"/>
+                                                <input type="submit" class="boton_obscuro" value="Guardar"/>&nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>       	
+                            </div> <!-- contenido -neto-->
+                        </div> <!-- contenido-real-->            
+                    </div>  
+                    <!-- </contenido> -->
+                </div>
+                <!-- <ancla> -->	
+                <p><iframe class="ancla" src="n.JPG" marginwidth="0" marginheight="0"   width="100%" scrolling="no" frameborder="0" height="2"  style="visibility:hidden;"></iframe></p>
+                <!-- </ancla> -->		
+
+            </div>
+            <!-- </segunda_parte> -->	
+           <!-- <tercera_parte> -->	
+            <!--Pie-->
+            <div class="pagina2"  >
+                <!--
+                require_once '../General/Pie.php';
+                <?php 
+                require_once('../General/Pie.php');
+                 ?>
+                --> 
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width: 20%">&nbsp;
+
+                        </td>
+                        <td style="width: auto; text-align: center">
+                            |<a href="sdf"> </a>|<a> Tecnologia-WEB </a>|<a href="http://www.uagrm.edu.bo"> UAGRM </a>|
+                        </td>
+                        <td style="width: 20%; text-align: right; vertical-align: middle; color: #fff">
+                            Visitas:&nbsp;&nbsp;<?php echo $this->_tpl_vars['visitas']; ?>
+
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /pagina2-->
+        </div> <!--/body2 -->
+    </body>
+</html>

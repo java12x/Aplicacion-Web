@@ -1,0 +1,13 @@
+/**********************************
+
+Name: cmxform Styles
+
+***********************************/
+
+form.cmxform label.error, label.error {
+	color: red;
+	font-style: italic;
+        font-size: 12px;
+}
+
+input.error { border: 1px dotted red; }
